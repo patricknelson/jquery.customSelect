@@ -103,10 +103,7 @@
                         changed($select,customSelectSpan);
                     })
                     .on('keyup.customSelect', function (e) {
-                        if(!customSelectSpan.hasClass(getClass('Open'))){
-                            $select.trigger('blur.customSelect');
-                            $select.trigger('focus.customSelect');
-                        }else{
+                        if(customSelectSpan.hasClass(getClass('Open'))){
                             if(e.which==13||e.which==27){
                                 changed($select,customSelectSpan);
                             }
